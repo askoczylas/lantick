@@ -2,6 +2,9 @@ DOMAIN = "lantick"
 
 
 def setup(hass, config):
-    hass.states.set("lantick.licznik1", "10")
+    
+    liczniki = [1, 2, 3]
+    for x in liczniki:
+        hass.states.set("ais_hello.licznik" + str(x), x*5)
 
     return True
